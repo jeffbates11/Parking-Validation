@@ -6,6 +6,8 @@
 
 #Dialysis administration are only allowed to park in a certain parking space on Monday, Wednesday, and Friday
 
+#(See example excel sheet)
+
 #What this script does:
 
         1. Loops through staff ID numbers
