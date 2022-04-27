@@ -2,6 +2,8 @@
 
 #This is a project I came up with based on a task I was given at work.
 
-#Every month a excel document is released regarding parking at the University of Iowa Hospitals and Clinics dialysis administration
+#Every month an excel document is released regarding dialysis administration parking at the University of Iowa Hospitals and Clinics
 
-#It was my job to match the staff members id 
+#Dialysis administration are only allowed to park in a certain parking space on Monday, Wednesday, and Friday. 
+
+
