@@ -1,0 +1,29 @@
+from openpyxl import load_workbook
+
+filename = 'Work.xlsx'
+wb = load_workbook(filename)
+ws = wb.worksheets[0]
+row = ws.max_row
+    
+staff = {22497: 'Katie Eichhorn', 
+         15002: 'Cory Nalan', 
+         39311: 'Morgan Betterton', 
+         15137: 'Bethany Hahn',
+         30015: 'Kandi O Connor', 
+         14332: 'Rashelle Frasher', 
+         51900: 'Wendy Rodriguez', 
+         63515: 'Sarahi Contreras',
+         57594: 'Vidyotama Sharma',
+         'CardNumber': 'Name of Card Holder'}
+
+
+for cell in ws['C']:
+    ws['D' + str(cell.row)] = staff[cell.value]
+    
+for cell in ws['F']:
+    if cell.value == 'Entry':
+        pass
+    else: 
+        ws['H' + str(cell.row)] = cell.value.strftime("%A")
+    
+wb.save(filename)
