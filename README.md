@@ -10,13 +10,13 @@
 
 #What this script does:
 
-        1. Loops through staff ID numbers
+        1. Loops through staff ID numbers.
         
-        2. fills in named of the staff members name using a dictionary.
+        2. Fills in name of staff member name using a dictionary.
         
-        3. Loops through the times that each vehicle parked
+        3. Loops through the times that each vehicle parked.
         
-        4. Determine if it was a Mon, Wed, or Fri
+        4. Determine if it was a Mon, Wed, or Fri.
         
         5. Fill in which day of the week they parked. 
 
