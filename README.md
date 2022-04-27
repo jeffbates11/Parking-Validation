@@ -6,7 +6,7 @@
 
 #Dialysis administration are only allowed to park in a certain parking space on Monday, Wednesday, and Friday
 
-#(See example excel sheet)
+#(See example blank_parking sheet)
 
 #What this script does:
 
