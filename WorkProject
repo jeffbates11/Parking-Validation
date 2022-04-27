@@ -5,15 +5,15 @@ wb = load_workbook(filename)
 ws = wb.worksheets[0]
 row = ws.max_row
     
-staff = {22497: 'Katie Eichhorn', 
-         15002: 'Cory Nalan', 
-         39311: 'Morgan Betterton', 
-         15137: 'Bethany Hahn',
-         30015: 'Kandi O Connor', 
-         14332: 'Rashelle Frasher', 
-         51900: 'Wendy Rodriguez', 
-         63515: 'Sarahi Contreras',
-         57594: 'Vidyotama Sharma',
+staff = {22497: 'Joe', 
+         15002: 'Bill', 
+         39311: 'Anna', 
+         15137: 'Megan',
+         30015: 'Bob', 
+         14332: 'Amy', 
+         51900: 'Homer', 
+         63515: 'Keagan',
+         57594: 'Sandra',
          'CardNumber': 'Name of Card Holder'}
 
 
