@@ -13,12 +13,13 @@ staff = {22497: 'Joe',
          14332: 'Amy', 
          51900: 'Homer', 
          63515: 'Keagan',
-         57594: 'Sandra',
-         'CardNumber': 'Name of Card Holder'}
-
+         57594: 'Sandra'}
 
 for cell in ws['C']:
-    ws['D' + str(cell.row)] = staff[cell.value]
+    if cell.value == 'CardNumber':
+        pass
+    else:  
+        ws['D' + str(cell.row)] = staff[cell.value]
     
 for cell in ws['F']:
     if cell.value == 'Entry':
