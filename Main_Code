@@ -1,10 +1,13 @@
 from openpyxl import load_workbook
+from openpyxl.styles import PatternFill
 
 filename = 'Work.xlsx'
 wb = load_workbook(filename)
 ws = wb.worksheets[0]
 row = ws.max_row
-    
+
+highlight = PatternFill(patternType='solid', fgColor='FC2C03')
+
 staff = {22497: 'Joe', 
          15002: 'Bill', 
          39311: 'Anna', 
@@ -18,13 +21,29 @@ staff = {22497: 'Joe',
 for cell in ws['C']:
     if cell.value == 'CardNumber':
         pass
-    else:  
+    else:
         ws['D' + str(cell.row)] = staff[cell.value]
     
 for cell in ws['F']:
-    if cell.value == 'Entry':
+    if cell.value == 'EntryTime':
         pass
     else: 
         ws['H' + str(cell.row)] = cell.value.strftime("%A")
-    
+ 
+for cell in ws['H']:
+    if cell.value == 'Is this day a M,W or F?':
+        pass
+    else:
+        if cell.value == 'Tuesday' or cell.value == 'Thursday' or cell.value == 'Saturday' or cell.value == 'Sunday':
+            ws['A' + str(cell.row)].fill = highlight
+            ws['B' + str(cell.row)].fill = highlight
+            ws['C' + str(cell.row)].fill = highlight
+            ws['D' + str(cell.row)].fill = highlight
+            ws['E' + str(cell.row)].fill = highlight
+            ws['F' + str(cell.row)].fill = highlight
+            ws['G' + str(cell.row)].fill = highlight
+            ws['H' + str(cell.row)].fill = highlight
+            ws['I' + str(cell.row)].fill = highlight
+            ws['J' + str(cell.row)].fill = highlight
+
 wb.save(filename)
