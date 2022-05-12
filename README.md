@@ -19,4 +19,5 @@
         4. Determine if it was a Mon, Wed, or Fri.
         
         5. Fill in which day of the week they parked. 
-
+        
+        6. Highlights row when invalid parking is recorded.
