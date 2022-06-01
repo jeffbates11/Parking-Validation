@@ -18,19 +18,23 @@ staff = {22497: 'Joe',
          63515: 'Keagan',
          57594: 'Sandra'}
 
+ws['O1'] = 'Staff Name'
+ws['P1'] = 'Day of Week'
+
 for cell in ws['C']:
     if cell.value == 'CardNumber':
         pass
-    else:
-        ws['D' + str(cell.row)] = staff[cell.value]
     
-for cell in ws['F']:
+    else:
+        ws['O' + str(cell.row)] = staff[cell.value]
+        
+for cell in ws['E']:
     if cell.value == 'EntryTime':
         pass
-    else: 
-        ws['H' + str(cell.row)] = cell.value.strftime("%A")
- 
-for cell in ws['H']:
+    else:
+        ws['P' + str(cell.row)] = cell.value.strftime("%A")
+
+for cell in ws['P']:
     if cell.value == 'Is this day a M,W or F?':
         pass
     else:
@@ -45,5 +49,12 @@ for cell in ws['H']:
             ws['H' + str(cell.row)].fill = highlight
             ws['I' + str(cell.row)].fill = highlight
             ws['J' + str(cell.row)].fill = highlight
+            ws['K' + str(cell.row)].fill = highlight
+            ws['L' + str(cell.row)].fill = highlight
+            ws['M' + str(cell.row)].fill = highlight
+            ws['N' + str(cell.row)].fill = highlight
+            ws['O' + str(cell.row)].fill = highlight
+            ws['P' + str(cell.row)].fill = highlight
 
+    
 wb.save(filename)
