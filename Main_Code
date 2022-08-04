@@ -31,8 +31,18 @@ for cell in ws['C']:
 for cell in ws['E']:
     if cell.value == 'EntryTime':
         pass
+    elif cell.value == None:
+        ws['E' + str(cell.row)] = 'MISSING!'
+        ws['E' + str(cell.row)].fill = highlight
     else:
         ws['P' + str(cell.row)] = cell.value.strftime("%A")
+
+for cell in ws['F']:
+    if cell.value == None:
+        ws['F' + str(cell.row)] = 'MISSING!'
+        ws['F' + str(cell.row)].fill = highlight
+    else:
+        pass
 
 for cell in ws['P']:
     if cell.value == 'Is this day a M,W or F?':
@@ -55,6 +65,5 @@ for cell in ws['P']:
             ws['N' + str(cell.row)].fill = highlight
             ws['O' + str(cell.row)].fill = highlight
             ws['P' + str(cell.row)].fill = highlight
-
     
 wb.save(filename)
