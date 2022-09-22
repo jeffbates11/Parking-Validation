@@ -1,6 +1,7 @@
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
 
+#Load in excel file 
 filename = 'Work.xlsx'
 wb = load_workbook(filename)
 ws = wb.worksheets[0]
@@ -8,6 +9,7 @@ row = ws.max_row
 
 highlight = PatternFill(patternType='solid', fgColor='FC2C03')
 
+#Fake directory for internet purposes 
 staff = {22497: 'Joe', 
          15002: 'Bill', 
          39311: 'Anna', 
@@ -17,17 +19,19 @@ staff = {22497: 'Joe',
          51900: 'Homer', 
          63515: 'Keagan',
          57594: 'Sandra'}
-
+         
+#Add headers for future rows
 ws['O1'] = 'Staff Name'
 ws['P1'] = 'Day of Week'
 
+#Fill in staff members name
 for cell in ws['C']:
     if cell.value == 'CardNumber':
         pass
-    
     else:
         ws['O' + str(cell.row)] = staff[cell.value]
-        
+
+#Check entry times
 for cell in ws['E']:
     if cell.value == 'EntryTime':
         pass
@@ -44,6 +48,7 @@ for cell in ws['F']:
     else:
         pass
 
+#Highlight invalid parking times
 for cell in ws['P']:
     if cell.value == 'Is this day a M,W or F?':
         pass
